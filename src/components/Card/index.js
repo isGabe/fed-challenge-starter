@@ -29,15 +29,12 @@ const Card = (props) => {
   } = props;
 
   const workoutsCount = workouts.length;
-  const imgPath= `${process.env.PUBLIC_URL}/assets/${imgUrl}`;
+  const imgPath = `${process.env.PUBLIC_URL}/assets`;
 
   return (
     <Wrapper>
-      <TimerIcon />
-      <DistanceIcon />
-      <PlaylistIcon />
       <ImageWrapper>
-        <img src={imgPath} alt="" />
+        <img src={`${imgPath}/${imgUrl}`} alt="" />
         {workoutsCount > 0 ? (
           <Workouts>
             <span className="workoutsCount">{workoutsCount}</span>
@@ -49,19 +46,21 @@ const Card = (props) => {
       <Content>
         <Heading>{title}</Heading>
         <Avatar>
-          <img src={avatarUrl} alt=""/>
+          <img src={`${imgPath}/avatars/${avatarUrl}`} alt=""/>
         </Avatar>
-        <Meta>
-          <Time>
-            <TimerIcon />
-            {time}
-          </Time>
-          <Distance>
-            <DistanceIcon />
-            <span className="distaceValue">{distance.value}</span>
-            <span className="distaceUnits">{distance.units}</span>
-          </Distance>
-        </Meta>
+        {distance || time ? (
+          <Meta>
+            <Time>
+              <TimerIcon />
+              {time}
+            </Time>
+            <Distance>
+              <DistanceIcon />
+              <span className="distaceValue">{distance.value}</span>
+              <span className="distaceUnits">{distance.units}</span>
+            </Distance>
+          </Meta>
+        ) : null}
         <MoreLink href={moreUrl}>View Details</MoreLink>
       </Content>
     </Wrapper>
@@ -70,7 +69,7 @@ const Card = (props) => {
 
 Card.defaultProps = {
   time: '',
-  distance: {},
+  distance: null,
   moreUrl: '',
   workouts: [],
 }

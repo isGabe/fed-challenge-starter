@@ -2,7 +2,7 @@ const data = [
   {
     title: 'Lake Inniscarra, Ireland — Pyramid',
     imgUrl: 'lake-inniscarra-ireland.jpg',
-    avatarUrl: '',
+    avatarUrl: 'puspure_sanita_avatar_002.jpg',
     time: '30:53',
     distance: {
       value: '6,248',
@@ -13,10 +13,8 @@ const data = [
   },
   {
     title: 'Performance Series',
-    imgUrl: '',
-    avatarUrl: '',
-    time: '',
-    distance: '',
+    imgUrl: 'performance-series.jpg',
+    avatarUrl: 'francia_susan_avatar_001.jpg',
     moreUrl: '',
     workouts: [
       {},
@@ -32,8 +30,8 @@ const data = [
   },
   {
     title: 'Slow Pulls and Fast Intervals',
-    imgUrl: '',
-    avatarUrl: '',
+    imgUrl: 'slow-pulls-fast-intervals.jpg',
+    avatarUrl: 'alex_silver_fagan.jpg',
     time: '44:13',
     distance: {
       value: '9,948',
@@ -44,13 +42,9 @@ const data = [
   },
   {
     title: '20 Minutes to Toned',
-    imgUrl: '',
-    avatarUrl: '',
+    imgUrl: '20-minutes-to-toned.jpg',
+    avatarUrl: 'gregory_alex_avatar_01.jpg',
     time: '',
-    distance: {
-      value: '',
-      units: '',
-    },
     moreUrl: '',
     workouts: [
       {},
@@ -69,8 +63,8 @@ const data = [
   },
   {
     title: 'Charles Race, Boston, Massachusetts',
-    imgUrl: '',
-    avatarUrl: '',
+    imgUrl: 'charles-race-boston.jpg',
+    avatarUrl: 'whipple_mary_hero.jpg',
     time: '36:22',
     distance: {
       value: '8,868',
@@ -81,13 +75,9 @@ const data = [
   },
   {
     title: 'Full-Body HIIT Series',
-    imgUrl: '',
-    avatarUrl: '',
+    imgUrl: 'full-body-hiit.jpg',
+    avatarUrl: 'eden_hannah_avatar_03.jpg',
     time: '',
-    distance: {
-      value: '',
-      units: '',
-    },
     moreUrl: '',
     workouts: [
       {},
@@ -106,8 +96,8 @@ const data = [
   },
   {
     title: 'Kafue River, Zambia — Power Stroke Pyramid',
-    imgUrl: '',
-    avatarUrl: '',
+    imgUrl: 'kafue-river-zambia-power-stroke-pyramid.jpg',
+    avatarUrl: 'nanchengwa_desmond_avatar_003.jpg',
     time: '22:22',
     distance: {
       value: '4,660',
@@ -118,13 +108,9 @@ const data = [
   },
   {
     title: 'Shred & Burn Series',
-    imgUrl: '',
-    avatarUrl: '',
+    imgUrl: 'shred-and-burn-series.jpg',
+    avatarUrl: 'gideon_akande.jpg',
     time: '',
-    distance: {
-      value: '',
-      units: '',
-    },
     moreUrl: '',
     workouts: [
       {},
