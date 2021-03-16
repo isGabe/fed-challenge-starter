@@ -7,7 +7,7 @@ import Card from './components/Card';
 function App() {
   WebFontLoader.load({
     google: {
-      families: ['Open+Sans:700:latin-ext']
+      families: ['Open+Sans:700,800']
     }
   })
   return (
@@ -22,12 +22,13 @@ function App() {
       workouts,
     }) => (
       <Card
-        title={title}
-        imgUrl={imgUrl || 'https://placekitten.com/600/400'}
         avatarUrl={avatarUrl}
-        time={time}
         distance={distance}
+        imgUrl={imgUrl || 'https://placekitten.com/600/400'}
+        key={title}
         moreUrl={moreUrl}
+        time={time}
+        title={title}
         workouts={workouts}
       />
     ))}

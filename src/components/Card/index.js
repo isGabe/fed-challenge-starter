@@ -56,12 +56,14 @@ const Card = (props) => {
             </Time>
             <Distance>
               <DistanceIcon />
-              <span className="distaceValue">{distance.value}</span>
-              <span className="distaceUnits">{distance.units}</span>
+              <span className="distanceValue">{distance.value}</span>
+              <span className="distanceUnits">{distance.units}</span>
             </Distance>
           </Meta>
         ) : null}
-        <MoreLink href={moreUrl}>View Details</MoreLink>
+        {moreUrl ? (
+          <MoreLink href={moreUrl}>View Details</MoreLink>
+        ) : null }
       </Content>
     </Wrapper>
   );
