@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  Wrapper,
+  Card,
+  ImageWrapper,
+  Content,
+  Heading,
+  Avatar,
+  Meta,
+  Time,
+  Distance,
+  MoreLink,
+} from  './styles';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Wrapper>
+        <Card>
+          <ImageWrapper>
+            <img src="https://placekitten.com/600x300" />
+          </ImageWrapper>
+          <Content>
+            <Heading>
+
+            </Heading>
+            <Avatar></Avatar>
+            <Meta>
+              <Time></Time>
+              <Distance></Distance>
+            </Meta>
+            <MoreLink></MoreLink>
+          </Content>
+        </Card>
+      </Wrapper>
     </div>
   );
 }
