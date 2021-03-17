@@ -7,8 +7,7 @@ export const Wrapper = styled.div`
   letter-spacing: ${rem(0.3)};
   line-height: 1.2;
   margin: 0 auto;
-  max-width: 90vw;
-  padding: 60px 0;
+  padding: ${rem(20)};
 
   @media (min-width: 32rem) {
     display: grid;
