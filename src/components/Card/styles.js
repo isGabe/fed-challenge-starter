@@ -49,7 +49,7 @@ export const ImageWrapper = styled.div`
   position: relative;
 `;
 
-export const Workouts = styled.div`
+export const Workouts = styled.a`
   background-color: rgba(0,0,0,0.5);
   color: #fff;
   height: 100%;
@@ -59,9 +59,14 @@ export const Workouts = styled.div`
   align-items: center;
   position: absolute;
   right: 0;
+  text-decoration: none;
   top: 0;
+  transition: width 0.2s ease-out;
   width: 38%;
 
+  &:hover {
+    width: 100%;
+  }
   .workoutsCount {
     font-weight: 800;
     font-size: ${rem(24)};

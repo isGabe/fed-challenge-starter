@@ -50,7 +50,7 @@ const Card = (props) => {
       <ImageWrapper>
         <img src={`${imgPath}/${imgUrl}`} alt="" />
         {workoutsCount > 0 ? (
-          <Workouts>
+          <Workouts href="#">
             <span className="workoutsCount">{workoutsCount}</span>
             <span className="workoutsText">Workouts</span>
             <PlaylistIcon />
