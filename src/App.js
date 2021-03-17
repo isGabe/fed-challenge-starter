@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from './data';
 import WebFontLoader from 'webfontloader'
 import { Wrapper } from  './styles';
@@ -9,22 +9,27 @@ function App() {
     google: {
       families: ['Open+Sans:700,800']
     }
-  })
+  });
+
+  const [activeCard, setActiveCard] = useState(null);
+
   return (
     <Wrapper>
     {data.map(({
-      title,
-      imgUrl,
       avatarUrl,
-      time,
       distance,
+      imgUrl,
       moreUrl,
+      time,
+      title,
       workouts,
-    }) => (
+    }, idx) => (
       <Card
         avatarUrl={avatarUrl}
         distance={distance}
-        imgUrl={imgUrl || 'https://placekitten.com/600/400'}
+        imgUrl={imgUrl}
+        handleClick={() => setActiveCard(idx)}
+        isActive={activeCard === idx}
         key={title}
         moreUrl={moreUrl}
         time={time}

@@ -3,9 +3,11 @@ import { rem } from '../../utils/pxToRelative';
 
 export const Wrapper = styled.div`
   border-radius: 4px;
-  border: solid 1px #eee;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  box-shadow: ${({ isActive }) => (
+    isActive ? `0px 1px 10px rgba(0,0,0,0.4)` : `0px 1px 1px rgba(0,0,0,0.4)`
+  )};
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 
   img {
     display: block;

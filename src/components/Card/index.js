@@ -24,6 +24,7 @@ const Card = (props) => {
     avatarUrl,
     time,
     distance,
+    handleClick,
     moreUrl,
     workouts,
   } = props;
@@ -32,7 +33,10 @@ const Card = (props) => {
   const imgPath = `${process.env.PUBLIC_URL}/assets`;
 
   return (
-    <Wrapper>
+    <Wrapper
+      isActive={isActive}
+      onClick={handleClick}
+    >
       <ImageWrapper>
         <img src={`${imgPath}/${imgUrl}`} alt="" />
         {workoutsCount > 0 ? (
@@ -81,6 +85,7 @@ Card.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   avatarUrl: PropTypes.string.isRequired,
   time: PropTypes.string,
+  handleClick: PropTypes.func.isRequired,
   distance: PropTypes.shape({
     value: PropTypes.string,
     units: PropTypes.string,
