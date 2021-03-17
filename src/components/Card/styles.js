@@ -35,6 +35,10 @@ export const Wrapper = styled.div`
     return delayStyles;
   }}
 
+  @media (min-width: 32rem) {
+    margin-bottom: 0;
+  }
+
   img {
     display: block;
     max-width: 100%;
