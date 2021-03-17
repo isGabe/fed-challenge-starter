@@ -28,7 +28,7 @@ function App() {
         avatarUrl={avatarUrl}
         distance={distance}
         imgUrl={imgUrl}
-        handleClick={() => setActiveCard(idx)}
+        handleClick={() => setActiveCard(activeCard !== idx ? idx : null)}
         isActive={activeCard === idx}
         count={data.length}
         key={title}
