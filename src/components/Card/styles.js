@@ -16,7 +16,24 @@ export const Wrapper = styled.div`
   border-radius: 4px;
   box-shadow: ${({ isActive }) => (isActive ? bigShadow : smallShadow)};
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  opacity: ${({ isLoaded }) => isLoaded ? '1' : '0'};
+  margin-bottom: ${rem(20)};
+  transition: box-shadow 0.3s ease, opacity 1s ease-out;
+
+  // Sequential fade in for each card
+  ${({ count }) => {
+    let delayStyles = '';
+    for (let step = 1; step <= count; step++) {
+      // Have to round to one decimal place because computers are weird :)
+      const delay = Math.round((step * 0.1) * 10) / 10;
+      delayStyles += `
+        &:nth-child(${step + 1}) {
+          transition-delay: ${delay}s;
+        }
+      `
+    }
+    return delayStyles;
+  }}
 
   img {
     display: block;

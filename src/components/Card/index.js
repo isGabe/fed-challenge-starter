@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as PlaylistIcon } from '../../icons/icon-playlist.svg';
 import { ReactComponent as TimerIcon } from '../../icons/icon-timer.svg';
@@ -23,6 +23,7 @@ const Card = (props) => {
     distance,
     handleClick,
     imgUrl,
+    count,
     isActive,
     moreUrl,
     time,
@@ -33,10 +34,18 @@ const Card = (props) => {
   const workoutsCount = workouts.length;
   const imgPath = `${process.env.PUBLIC_URL}/assets`;
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <Wrapper
       isActive={isActive}
       onClick={handleClick}
+      isLoaded={isLoaded}
+      count={count}
     >
       <ImageWrapper>
         <img src={`${imgPath}/${imgUrl}`} alt="" />
@@ -89,6 +98,7 @@ Card.propTypes = {
     units: PropTypes.string,
   }),
   imgUrl: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
   isActive: PropTypes.bool.isRequired,
   moreUrl: PropTypes.string,
   time: PropTypes.string,

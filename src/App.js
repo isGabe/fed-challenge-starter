@@ -30,6 +30,7 @@ function App() {
         imgUrl={imgUrl}
         handleClick={() => setActiveCard(idx)}
         isActive={activeCard === idx}
+        count={data.length}
         key={title}
         moreUrl={moreUrl}
         time={time}
