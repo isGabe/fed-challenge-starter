@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 import { rem } from '../../utils/pxToRelative';
 
+const bigShadow = `
+  0 0.6px 0.5px rgba(0, 0, 0, 0.005),
+  0 1.3px 1.1px rgba(0, 0, 0, 0.018),
+  0 2.5px 2.1px rgba(0, 0, 0, 0.034),
+  0 4.5px 3.8px rgba(0, 0, 0, 0.05),
+  0 8.4px 7.1px rgba(0, 0, 0, 0.065),
+  0 20px 17px rgba(0, 0, 0, 0.07)
+`;
+
+const smallShadow = `0px 1px 1px rgba(0,0,0,0.4)`;
+
 export const Wrapper = styled.div`
   border-radius: 4px;
-  box-shadow: ${({ isActive }) => (
-    isActive ? `0px 1px 10px rgba(0,0,0,0.4)` : `0px 1px 1px rgba(0,0,0,0.4)`
-  )};
+  box-shadow: ${({ isActive }) => (isActive ? bigShadow : smallShadow)};
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 
