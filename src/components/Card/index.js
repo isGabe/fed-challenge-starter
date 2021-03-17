@@ -19,13 +19,14 @@ import {
 
 const Card = (props) => {
   const {
-    title,
-    imgUrl,
     avatarUrl,
-    time,
     distance,
     handleClick,
+    imgUrl,
+    isActive,
     moreUrl,
+    time,
+    title,
     workouts,
   } = props;
 
@@ -74,23 +75,24 @@ const Card = (props) => {
 };
 
 Card.defaultProps = {
-  time: '',
   distance: null,
   moreUrl: '',
+  time: '',
   workouts: [],
 }
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
   avatarUrl: PropTypes.string.isRequired,
-  time: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
   distance: PropTypes.shape({
     value: PropTypes.string,
     units: PropTypes.string,
   }),
+  imgUrl: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
   moreUrl: PropTypes.string,
+  time: PropTypes.string,
+  title: PropTypes.string.isRequired,
   workouts: PropTypes.arrayOf(PropTypes.shape({})),
 };
 

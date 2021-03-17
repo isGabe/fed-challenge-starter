@@ -102,7 +102,7 @@ export const Distance = styled.span`
 export const MoreLink = styled.a`
   color: #0069D2;
   font-size: ${rem(14)};
-  grid-column: span 2;
+  grid-column: span 1;
   text-decoration: none;
   text-transform: uppercase;
 
